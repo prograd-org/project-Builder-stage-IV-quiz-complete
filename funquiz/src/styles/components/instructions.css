@@ -1,0 +1,26 @@
+.instructions-body{
+    border: 2px black solid;
+    margin: 20px;
+    box-shadow: 10px 10px 18px grey;
+}
+.instructions-heading1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 18px grey;
+}
+.instructions-heading2{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.instructions-list{
+    list-style: circle inside;
+    text-align: center;
+}
+.goto{
+    margin: 70px;
+}
+.gotohome, .gotogame {
+    padding: 40px 120px;
+}

@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+    color:black;
+    text-align: center;
+}
+
+.toast-valid{
+    background-color: rgb(51, 124, 51) !important;
+    border-radius: 5px !important;
+    color: white !important;
+}
+
+.toast-invalid{
+    background-color: rgb(151, 43, 43) !important;
+    border-radius: 5px !important;
+    color: white !important;
+}
+
+.disable{
+    background-color: #ccc !important;
+    box-shadow: none !important;
+    opacity: 0.9 !important;
+    pointer-events: none;
+}

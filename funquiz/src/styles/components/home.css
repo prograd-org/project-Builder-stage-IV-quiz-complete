@@ -1,0 +1,82 @@
+body{
+    color: black;
+}
+#home{
+    background-image: url('../../assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    width:100vw;
+}
+
+.homejs-section{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 35%;
+}
+
+.CubeIcon{
+    font-size: 8rem;
+    color: rgb(134, 180, 218);
+    margin-top: 50px;
+}
+
+h1{
+    padding-top: 7px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+}
+
+.play-button-container{
+    width: 100%;
+    padding-top: 10%;
+}
+
+a.play-button{
+    background-color: green;
+    display: block;
+    color:white;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s linear all;
+}
+a.play-button:hover{
+    background-color: darkgreen;
+}
+.auth-container{
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+.auth-container .auth-container-buttons{
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 45%;
+    text-decoration: none;
+    transition: 0.3s linear all;
+}
+#login-button{
+    background-color: rgb(134, 180, 218); 
+    padding: 1rem 0;
+}
+
+#login-button:hover{
+    background-color: rgb(83, 151, 207);
+}
+
+#register-button{
+    background-color: red;
+    padding: 1rem 0;
+}
+
+#register-button:hover{
+    background-color: rgb(199, 28, 28)
+}
