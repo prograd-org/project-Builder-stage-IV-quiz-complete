@@ -1,0 +1,119 @@
+/*background */
+.image-div{
+    height: 100vh;
+    width:100vw;
+    background-image: url('../../assets/images/quiz-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: left;
+    filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+/* top section */
+.ClockIcon{
+    color: rgb(230, 189, 136);
+}
+
+.question-number-timer{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*question section*/
+.playjs-section{
+    background-color: rgb(124, 96, 75);
+    height: 100%;
+    width: 55%;
+    border-left: 5px rgb(156, 109, 39) solid;
+    padding: 2rem 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.only-questions-answers{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+h5{
+    font-size: 1.2rem;
+    padding: 50px 10px;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+    border: 2px solid  rgb(167, 126, 73);
+}
+
+.options-section{
+    display: inline-block;
+    width: 50%;
+}
+
+.option{
+    background-color: rgb(167, 126, 73);
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px 20px 20px 20px;
+    padding: 15px 50px;
+    transition: 0.3s linear all;
+}
+
+.option:hover{
+    background-color:  rgb(141, 100, 46);
+}
+
+/* end section*/
+.next-previous-section{
+   display: flex-start;
+   justify-content: center;
+   margin: 30px 30px;
+}
+
+#previous-button{
+    background-color: rgb(167, 126, 73);
+    padding: 20px 40px;
+    margin: 10px;
+    cursor: pointer;
+}
+#next-button{
+    padding: 20px 40px;
+    margin: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: rgb(74, 151, 74);
+}
+#quit-button{
+    background-color: rgb(167, 126, 73);
+    padding: 20px 40px;
+    margin: 10px;
+    cursor: pointer;
+    margin-left: 80px;
+    background-color: rgb(185, 53, 53);
+}
+
+#next-button:hover{
+    background-color: rgb(51, 124, 51);
+}
+
+#previous-button:hover{
+    background-color:  rgb(141, 100, 46);
+}
+
+#quit-button:hover{
+   background-color:  rgb(151, 43, 43);
+}
+
+#next-button:focus{
+    background-color: rgb(51, 124, 51);
+}
+
+#previous-button:focus{
+    background-color:  rgb(141, 100, 46);
+}
+
+#quit-button:focus{
+   background-color:  rgb(151, 43, 43);
+}

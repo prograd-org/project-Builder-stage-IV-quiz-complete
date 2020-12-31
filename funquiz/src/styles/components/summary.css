@@ -1,0 +1,26 @@
+.quiz-stats-container{
+    background-color:white;
+    height: 100vh;
+    width:100vw;
+}
+.greeting{
+    color: green;
+    font-size: 3rem;
+}
+.only-stats{
+    background-color: grey;
+    width: 55%;
+    margin-left: 20%;
+    margin-bottom: 30px;
+}
+.home-quiz-container{
+    display: flex-start;
+    justify-content: center;
+}
+.takemeto{
+    border: solid grey 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 30px;
+}
