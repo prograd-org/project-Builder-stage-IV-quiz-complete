@@ -12,7 +12,7 @@ const Instructions = () => (
                 <ol className="instructions-list">
                     <li>There are five questions.</li>
                     <li>Each question has four options to choose an answer.</li>
-                    <li>Only One of them is right.</li>
+                    <li>Since only one of them is the right answer</li>
                     <li>Failing to click the right answer deducts the points.</li>
                 </ol>
             </div>
