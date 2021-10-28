@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Questions from '../resourses/questions.json'
@@ -9,20 +8,11 @@ export default class QuizComponent extends Component {
         this.state = {
             qid: 0,
             time: 250,
-            ans: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            ans: [],
             ques: []
         }
         this.intervalId = setInterval(this.timer.bind(this), 1000)
         this.removeId = setInterval(this.removeAns.bind(this), 2000);
-    }
-
-    componentDidMount = () => {
-        axios.get('https://my-json-server.typicode.com/Naveen132895/quiz-api/questions')
-            .then((res) => {
-                this.setState({
-                    ques: res.data
-                })
-            })
     }
 
     nextQ = () => {
