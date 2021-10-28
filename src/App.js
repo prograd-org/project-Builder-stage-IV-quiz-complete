@@ -31,14 +31,16 @@ export default class App extends Component {
   }
   render() {
     if (this.state.ques.length === 0) {
-      return <img src="/load.gif" alt="" />;
+      return <div className="load">
+        <img src="https://raw.githubusercontent.com/AaryanShaikh/project-Builder-stage-IV-quiz-complete/main/load.gif" alt="" />
+      </div>;
     } else {
       return (
         <div className="App">
           <Router>
             <Switch>
               <Route exact path="/"><HomeComponent /></Route>
-              <Route path="/quiz"><QuizComponent sentAns={this.getAns} /></Route>
+              <Route path="/quiz"><QuizComponent sentAns={this.getAns} ques={this.state.ques} /></Route>
               <Route path="/result"><ResultComponent sentAns={this.state.ans} /></Route>
             </Switch>
           </Router>

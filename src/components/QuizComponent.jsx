@@ -8,8 +8,7 @@ export default class QuizComponent extends Component {
         this.state = {
             qid: 0,
             time: 250,
-            ans: [],
-            ques: []
+            ans: []
         }
         this.intervalId = setInterval(this.timer.bind(this), 1000)
         this.removeId = setInterval(this.removeAns.bind(this), 2000);
@@ -19,10 +18,10 @@ export default class QuizComponent extends Component {
         this.setState({
             qid: this.state.qid + 1
         })
-        if (this.state.qid >= 13) {
+        if (this.state.qid >= this.props.ques.length - 2) {
             document.getElementById("next").classList.add("dis");
             this.setState({
-                qid: 14
+                qid: this.props.ques.length - 1
             })
         } else {
             document.getElementById("prev").classList.remove("dis");
@@ -60,7 +59,7 @@ export default class QuizComponent extends Component {
 
     optionSelect = (e) => {
         let span = document.createElement("span");
-        if (Questions[this.state.qid].answer === e.target.value) {
+        if (this.props.ques[this.state.qid].answer === e.target.value) {
             span.textContent = "Correct Answer";
             span.classList.add("yes");
             let newAns = [...this.state.ans];
@@ -99,15 +98,15 @@ export default class QuizComponent extends Component {
                 <h1>Question</h1>
                 <div className="ans" id="ans"></div>
                 <div className="QueData">
-                    <span>{this.state.qid + 1} of {Questions.length}</span>
-                    <span>{Questions[this.state.qid].question}</span>
+                    <span>{this.state.qid + 1} of {this.props.ques.length}</span>
+                    <span>{this.props.ques[this.state.qid].question}</span>
                     <span>{this.state.time} <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/twelve-thirty_1f567.png" alt="stopwatch" height="30px" /></span>
                 </div>
                 <div className="options">
-                    <button onClick={this.optionSelect} value={Questions[this.state.qid].optionA}>{Questions[this.state.qid].optionA}</button>
-                    <button onClick={this.optionSelect} value={Questions[this.state.qid].optionB}>{Questions[this.state.qid].optionB}</button>
-                    <button onClick={this.optionSelect} value={Questions[this.state.qid].optionC}>{Questions[this.state.qid].optionC}</button>
-                    <button onClick={this.optionSelect} value={Questions[this.state.qid].optionD}>{Questions[this.state.qid].optionD}</button>
+                    <button onClick={this.optionSelect} value={this.props.ques[this.state.qid].options[0]}>{this.props.ques[this.state.qid].options[0]}</button>
+                    <button onClick={this.optionSelect} value={this.props.ques[this.state.qid].options[1]}>{this.props.ques[this.state.qid].options[1]}</button>
+                    <button onClick={this.optionSelect} value={this.props.ques[this.state.qid].options[2]}>{this.props.ques[this.state.qid].options[2]}</button>
+                    <button onClick={this.optionSelect} value={this.props.ques[this.state.qid].options[3]}>{this.props.ques[this.state.qid].options[3]}</button>
                 </div>
                 <div className="bottom">
                     <button onClick={this.prevQ} id="prev" className="dis">Previous</button>

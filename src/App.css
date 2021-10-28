@@ -226,3 +226,12 @@ button {
 .no {
   background: indianred;
 }
+
+.load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #1b1d21;
+}
