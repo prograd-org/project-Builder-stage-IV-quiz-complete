@@ -3,7 +3,7 @@ import './App.css';
 import HomeComponent from './components/HomeComponent';
 import QuizComponent from './components/QuizComponent';
 import ResultComponent from './components/ResultComponent';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 
 export default class App extends Component {
@@ -37,13 +37,11 @@ export default class App extends Component {
     } else {
       return (
         <div className="App">
-          <Router>
-            <Switch>
-              <Route exact path="/"><HomeComponent /></Route>
-              <Route path="/quiz"><QuizComponent sentAns={this.getAns} ques={this.state.ques} /></Route>
-              <Route path="/result"><ResultComponent sentAns={this.state.ans} /></Route>
-            </Switch>
-          </Router>
+          <Switch>
+            <Route exact path="/"><HomeComponent /></Route>
+            <Route path="/quiz"><QuizComponent sentAns={this.getAns} ques={this.state.ques} /></Route>
+            <Route path="/result"><ResultComponent sentAns={this.state.ans} /></Route>
+          </Switch>
         </div>
       );
     }
